@@ -1,11 +1,12 @@
 ﻿using Backend;
 
-var stack1 = new StackUsingArray<string>(10);
+var stack1 = new StackUsingList<string>();
+//var stack1 = new StackUsingArray<string>();
 
 var option = string.Empty;
 do
 {
-    
+
     option = Menu();
     try
     {
@@ -33,7 +34,7 @@ do
     {
         Console.WriteLine($"Error: {ex.Message}");
     }
-}while (option != "0");
+} while (option != "0");
 
 string Menu()
 {
@@ -44,7 +45,7 @@ string Menu()
     Console.Write("Seleccione una opción: ");
     return Console.ReadLine()!;
 }
-    
+
 
 
 
